@@ -47,7 +47,7 @@ public class SensorsController {
             StringBuilder errorMessage = new StringBuilder();
             List<FieldError> fieldErrors = bindingResult.getFieldErrors();
             for (FieldError fieldError : fieldErrors) {
-                errorMessage.append(fieldError.getField()).append("-").append(fieldError.getDefaultMessage()).append(";");
+                errorMessage.append(fieldError.getDefaultMessage()).append(";");
             }
 
             throw new SensorNotCreatedException(errorMessage.toString());

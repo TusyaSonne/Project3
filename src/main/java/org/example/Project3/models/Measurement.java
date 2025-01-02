@@ -15,10 +15,10 @@ public class Measurement {
     private int id;
 
     @Column(name = "value")
-    private float value;
+    private Float value;
 
     @Column(name = "raining")
-    private boolean raining;
+    private Boolean raining;
 
     @ManyToOne
     @JoinColumn(name = "sensor_id", referencedColumnName = "id")
@@ -31,7 +31,7 @@ public class Measurement {
     public Measurement() {
     }
 
-    public Measurement(float value, boolean raining, Sensor sensor, LocalDateTime timeOfMeasurement) {
+    public Measurement(Float value, Boolean raining, Sensor sensor, LocalDateTime timeOfMeasurement) {
         this.value = value;
         this.raining = raining;
         this.sensor = sensor;
@@ -46,19 +46,19 @@ public class Measurement {
         this.id = id;
     }
 
-    public float getValue() {
+    public Float getValue() {
         return value;
     }
 
-    public void setValue(float value) {
+    public void setValue(Float value) {
         this.value = value;
     }
 
-    public boolean isRaining() {
+    public Boolean isRaining() {
         return raining;
     }
 
-    public void setRaining(boolean raining) {
+    public void setRaining(Boolean raining) {
         this.raining = raining;
     }
 

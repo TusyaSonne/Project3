@@ -11,18 +11,18 @@ import org.hibernate.validator.constraints.Range;
 public class MeasurementDTO {
 
 
-    @NotNull(message = "Value should not be empty")
-    @Range(min = -100, max = 100, message = "Name should be between 2 and 30 characters")
-    private float value;
+    @NotNull(message = "Значение value не может быть пустым")
+    @Range(min = -100, max = 100, message = "value должна находиться в диапазоне от -100 до 100")
+    private Float value;
 
-    @NotNull(message = "variable raining should not be empty")
-    private boolean raining;
+    @NotNull(message = "Значение raining не может быть пустым")
+    private Boolean raining;
 
     @NotNull
     @Valid
     private SensorDTO sensor;
 
-    public MeasurementDTO(float value, boolean raining, SensorDTO sensor) {
+    public MeasurementDTO(Float value, Boolean raining, SensorDTO sensor) {
         this.value = value;
         this.raining = raining;
         this.sensor = sensor;
@@ -31,20 +31,20 @@ public class MeasurementDTO {
     public MeasurementDTO() {}
 
 
-    public float getValue() {
+    public Float getValue() {
         return value;
     }
 
-    public void setValue(float value) {
+    public void setValue(Float value) {
         this.value = value;
     }
 
 
-    public boolean isRaining() {
+    public Boolean isRaining() {
         return raining;
     }
 
-    public void setRaining(boolean raining) {
+    public void setRaining(Boolean raining) {
         this.raining = raining;
     }
 

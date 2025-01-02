@@ -51,7 +51,7 @@ public class MeasurementsController {
         if (bindingResult.hasErrors()) {
             StringBuilder errorMessage = new StringBuilder();
             for (FieldError error : bindingResult.getFieldErrors()) {
-                errorMessage.append(error.getField()).append(" - ").append(error.getDefaultMessage()).append(";");
+                errorMessage.append(error.getDefaultMessage()).append(";");
             }
 
             throw new MeasurementNotCreatedException(errorMessage.toString());

@@ -8,5 +8,5 @@ import java.util.List;
 
 @Repository
 public interface MeasurementsRepository extends JpaRepository<Measurement, Integer> {
-    List<Measurement> findByRaining(boolean raining);
+    List<Measurement> findByRaining(Boolean raining);
 }
